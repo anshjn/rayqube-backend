@@ -19,7 +19,9 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
-
+app.get('/', (req, res) => {
+    res.send('Hello world');
+});
 app.use('/file', fileUpload);
 app.use('/api', api);
 app.use('/uploads', express.static('uploads'));
