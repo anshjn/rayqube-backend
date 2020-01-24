@@ -6,7 +6,7 @@ const path = require('path');
 const api = require('./server/routes/api');
 const fileUpload = require('./server/routes/file');
 
-const port = 1338;
+const port = process.env.PORT || 3000;;
 
 app = express();
 app.use(function (req, res, next) {
